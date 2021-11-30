@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 // EX01
 std::string string_range(int begin, int end)
@@ -37,9 +38,55 @@ double ponderate(double a, double b)
     return ponderate(a, b, 0.5);
 }
 
+// EX03
+struct vector2
+{
+    double x;
+    double y;
+};
+
+vector2 ponderate(vector2 a, vector2 b, double weight)
+{
+    vector2 value;
+    value.x = ponderate(a.x, b.x, weight);
+    value.y = ponderate(a.y, a.y, weight);
+
+    return value;
+}
+
+vector2 ponderate(vector2 a, vector2 b)
+{
+    return ponderate(a, b, 0.5);
+}
+
+// EX04
+inline double distance(vector2 a, vector2 b)
+{
+    return std::sqrt(std::pow((b.x - a.x), 2) + std::pow((b.y - a.y), 2));
+}
+
+// EX05
+int sum_range(int begin, int end)
+{
+    int sum = 0;
+    int range = end - begin;
+    begin > end ? range = -range + 1 : range += 1;
+
+    int i = 0;
+    while(i < range)
+    {
+        int value;
+        begin > end ? value = -(i + -begin) : value = i + begin;
+
+        sum += value;
+        i++;
+    }
+
+    return sum;
+}
 
 int main()
 {
-    std::cout << ponderate(0, 10) << std::endl;
+    std::cout << sum_range(10, 2) << std::endl;
     return 0;
 }
