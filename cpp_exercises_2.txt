@@ -1,0 +1,59 @@
+ex01:
+Write a function whose prototype is `std::string string_range(int end)` that
+returns a comma-separated list of numbers in a string, starting at 1 and ending
+at `end`.
+Make it so that it can also be called as `std::string string_range(int begin, int end)`.
+The returned range should be an increasing sequence or be empty.
+
+ex02: 
+Write a function whose prototype is `double ponderate(double a, double b)` that
+returns the floating-point value that is exactly at the middle between `a` and `b`.
+Make it so it can also be called with a third parameter `double weight` that is a
+value between 0 and 1, the function returning a if it's 0, b if it's 1.
+(Header required)
+
+ex03:
+Consider the structure `struct vector2{double x; double y};`.
+Write the inline function whose prototype is `vector2 ponderate(vector2 a, vector2 b)`.
+Make it so it can also be called with a third parameter `double weight` that is a
+value between 0 and 1, the function returning a if it's 0, b if it's 1.
+(Header only)
+
+ex04:
+Consider the structure `struct vector2{double x; double y};`.
+Write the inline function whose prototype is `double distance(vector2 a, vector2 b)`.
+It should return the geometrical distance between the two positions.
+Tip: look up Pythagorus Theorem if you can't see how to compute that.
+(Header only)
+
+ex05:
+Write a function whose prototype is `int sum_range(int begin, int end)` that
+returns the sum of all numbers that would be present in the corresponding range.
+
+ex06:
+Write a function that can be called as `unsigned long long fibonacci<N>()` that
+returns the Nth number of the fibonnaci sequence and that would generate it at
+compile-time if the correct optimisations are enabled.
+(Header only)
+
+ex07:
+Write a function that can be called as `T difference(T a, T b)` returning the
+positive difference between a and b, with T being any numeric type.
+(Header only)
+
+ex08:
+Write a function that can be called as `double product(TA a, TB b)`, returning
+the product of a and b as a double-precision floating point value, with TA and
+TB being any numeric types.
+(Header only)
+
+ex09:
+Write a function that can be called as `long sum(long a, long b, long c...)`
+that returns the sum of any number of parameters.
+Tip: look up "variadic templates".
+(Header only)
+
+ex10:
+Using C macros, generate 100 functions compatible with the C ABI: `sum1` to `sum100`
+that take respectively 1 to 100 parameters and that return the sum of them, using
+the functions from the previous exercise.
