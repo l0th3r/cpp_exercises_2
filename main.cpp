@@ -85,8 +85,23 @@ int sum_range(int begin, int end)
     return sum;
 }
 
+// EX06
+template<int N>
+unsigned long long fibonacci()
+{
+    if(N <= 1)
+        return N;
+    return (fibonacci<N-1>() + fibonacci<N-2>());
+}
+
+template <>
+unsigned long long fibonacci<0>()
+{
+    return 1;
+}
+
 int main()
 {
-    std::cout << sum_range(10, 2) << std::endl;
+    std::cout << fibonacci<1>() << std::endl;
     return 0;
 }
