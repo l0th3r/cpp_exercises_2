@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 // EX01
 std::string string_range(int begin, int end)
