@@ -3,5 +3,5 @@
 // EX02
 double ponderate(double a, double b, double weight)
 {
-    return (a * (weight - 1)) + (weight * b);
+    return (a * (1 - weight)) + (weight * b);
 }

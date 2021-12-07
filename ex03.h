@@ -14,7 +14,7 @@ inline vector2 ponderate(vector2 a, vector2 b, double weight = 0.5)
 {
     vector2 value;
     value.x = ponderate(a.x, b.x, weight);
-    value.y = ponderate(a.y, b.y, weight);
+    value.y = ponderate(a.y, a.y, weight);
 
     return value;
 }
